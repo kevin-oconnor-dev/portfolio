@@ -5,25 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Kevin O'Connor's Development Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+    </style>
 </head>
 <body>
     <header>
+        <ul class="background">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
         <nav>
-            <div class="nav-item">Home</div>
-            <div class="nav-item">Project 1</div>
-            <div class="nav-item">Project 2</div>
+            <div class="nav-item">About</div>
+            <div class="nav-item">Projects</div>
         </nav>
+        <h1 id="main-header">Hi, I'm Kevin.</h1>
+        <img id="dev-computer" alt="a cartoon computer" src="img/dev-graphic.svg">
     </header>
     <main>
-        <h2>
-            Kevin O'Connor is a website developer with experience in HTML, CSS, and JavaScript.
-        </h2>
         <div class="seperator"></div>
-        <h2 id="projects-title">Projects</h2>
-        <div class="projects-container">
-            <a href="../Dubliners_Project/index.html"><img src="img/dubliners-thumbnail2.png" alt="link to project1"></a>
-            <a href="../Stamford_bridge_css-practice/index.html"><img src="img/stamford-bridge-thumbnail.png" alt="link to project2"></a>
-        </div>
+        <section id="about-me">
+            <h2 id="about-header">About Me</h2>
+            <div id="about-box">
+                <p id="about-text">Hey there! I'm a web developer with an interest in design!
+                    <br><br>
+                    Chaos prejudice oneself intentions society christian truth good. 
+                    Enlightenment transvaluation justice merciful love enlightenment ocean holiest
+                    of selfish philosophy. Holiest against derive philosophy against grandeur ultimate.
+                    Justice inexpedient of chaos self derive merciful. Transvaluation battle moral strong
+                    christianity aversion passion transvaluation victorious moral overcome snare.
+                </p>
+            </div>
+            <div id="skills-cont">
+                <h2 id="skills-header">My Skills</h2>
+                <div id="skills-box">
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">Git</div>
+                    <div class="skill">GitHub</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">Semantic HTML</div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2 id="projects-header">Projects</h2>
+            <div class="projects-container">
+                <div class="proj"></div>
+                <div class="proj"></div>
+                <div class="proj"></div>
+                <div class="proj"></div>
+            </div>
+        </section>
     </main>
+    <div class="seperator"></div>
+    <footer>
+        <div id="footer-box">
+            <p>Email: kevinjoconnor7@gmail.com</p>
+            <p><a>Contact</a></p>
+            <p id="copy">&copy; Kevin O'Connor 2025</p>
+        </div>
+    </footer>
 </body>
 </html>

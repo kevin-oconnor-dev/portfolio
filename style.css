@@ -2,35 +2,103 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+/* ---------------- header ------------------- */
 nav {
     display: flex;
     margin-top: 10px;
     justify-content: flex-end;
 }
 .nav-item {
-    border: 1px solid;
     width: clamp(20px 3vw 40px);
     padding: 2px;
-    margin: 0 5px;
+    margin: 0 1vw;
+    font-family: "Bagel Fat One";
+    font-size: 1.3em;
 }
-.nav-item:nth-child(3) {
-    margin-right: 20px;
+.nav-item:hover {
+    cursor: pointer;
+    color: white;
+    transition: color .2s;
 }
-h2 {
-    margin: 20px 10px 20px 10px;
+.nav-item:nth-child(2) {
+    margin-right: 3vw;
+}
+header {
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+}
+#main-header {
+    position: relative;
+    text-align: center;
+    top: 25%;
+    font-size: clamp(55px, 10vw, 140px);
+    font-family: "Bagel Fat One";
     font-weight: normal;
+}
+@media (max-width: 800px) {
+    header #main-header {
+        font-size: clamp(55px, 10vw, 70px);
+    }
+}
+#dev-computer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 10em;
+    margin-bottom: 10px;
 }
 .seperator {
     width: 100vw;
     height: 2px;
     background-color: black;
 }
-.projects-container {
-    margin: 0 3vw;
-    width: clamp(350px, 40vw, 700px);
-    height: clamp(200px, 3vw, 400px);
+
+/* ---------------- about me section ------------------- */
+main h2 {
+    margin: 2vw;
+    text-align: center;
+}
+#about-box {
+    margin: auto;
+    width: 85vw;
+    background-color: #3eb18b;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5em;
+}
+#skills-cont {
+    margin: 5vw auto;
+    width: 85vw;
+    background-color: #3eb18b;
+    padding: 10px;
+    border-radius: 10px;
+}
+#skills-header {
+    text-align: left;
+    font-weight: normal;
+    margin: 5px 2vw;
+}
+#skills-box {
     display: flex;
-    flex-direction: column;
+    margin: 5px 2vw;
+    gap: 5px;
+}
+.skill {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: cornsilk;
+}
+
+/* ---------------- projects section ------------------- */
+.projects-container {
+    margin-bottom: 4vh;
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
 }
 .projects-container img {
     display: block;
@@ -45,3 +113,121 @@ h2 {
 .projects-container img:hover {
     height: 20vw;
 }
+.proj {
+    height: 46vh;
+    width: 18vw;
+    background-color: rgb(72, 135, 72);
+}
+@media (max-width: 800px) {
+    main .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    main .proj {
+        height: 25vh;
+        width: 80vw;
+    }
+}
+
+/* ---------------- footer ------------------- */
+footer {
+    position: relative;
+    display: flow-root;
+    height: 20vh;
+    background-color: #3eb18b
+}
+#footer-box {
+    margin: 2vw;
+}
+#copy {
+    position: absolute;
+    top: 2vw;
+    right: 1vw;
+}
+
+/* ---------------- Hero img animation ------------------- */
+@keyframes background {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+.background {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #3eb18b;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: background 50s linear infinite;
+}
+
+.background li:nth-child(0) {
+    left: 7%;
+    width: 113px;
+    height: 113px;
+    bottom: -113px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 42%;
+    width: 107px;
+    height: 107px;
+    bottom: -107px;
+    animation-delay: 5s;
+}
+.background li:nth-child(2) {
+    left: 67%;
+    width: 100px;
+    height: 100px;
+    bottom: -100px;
+    animation-delay: 3s;
+}
+.background li:nth-child(3) {
+    left: 52%;
+    width: 85px;
+    height: 85px;
+    bottom: -85px;
+    animation-delay: 6s;
+}
+.background li:nth-child(4) {
+    left: 5%;
+    width: 129px;
+    height: 129px;
+    bottom: -129px;
+    animation-delay: 4s;
+}
+.background li:nth-child(5) {
+    left: 86%;
+    width: 121px;
+    height: 121px;
+    bottom: -121px;
+    animation-delay: 21s;
+}
+.background li:nth-child(6) {
+    left: 68%;
+    width: 182px;
+    height: 182px;
+    bottom: -182px;
+    animation-delay: 8s;
+}
+
