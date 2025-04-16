@@ -83,6 +83,7 @@ main h2 {
 }
 #skills-box {
     display: flex;
+    flex-wrap: wrap;
     margin: 5px 2vw;
     gap: 5px;
 }
