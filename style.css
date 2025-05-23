@@ -92,6 +92,8 @@ main h2 {
     border-radius: 5px;
     padding: 5px;
     background-color: cornsilk;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 /* ---------------- projects section ------------------- */
@@ -146,7 +148,7 @@ footer {
     right: 1vw;
 }
 
-/* ---------------- Hero img animation ------------------- */
+/* ---------------- Header animation ------------------- */
 @keyframes background {
     0%{
         transform: translateY(0) rotate(0deg);
