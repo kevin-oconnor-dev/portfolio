@@ -8,7 +8,8 @@
     <title>Kevin O'Connor's Development Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
-    </style>
+        @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');    </style>
 </head>
 <body>
     <header>
@@ -25,7 +26,10 @@
             <div class="nav-item">About</div>
             <div class="nav-item">Projects</div>
         </nav>
-        <h1 id="main-header">Hi, I'm Kevin.</h1>
+        <div id="main-header-stack">
+            <h1 id="main-header">Hi, I'm Kevin.</h1>
+            <h1 id="main-header-fill">Hi, I'm Kevin.</h1>
+        </div>
         <img id="dev-computer" alt="a cartoon computer" src="img/dev-graphic.svg">
     </header>
     <main>
@@ -59,7 +63,12 @@
         <section id="projects">
             <h2 id="projects-header">Projects</h2>
             <div class="projects-container">
-                <div class="proj"></div>
+                <div class="proj">
+                    <img class="proj-img" alt="proj1" src="img/projects/asteroids-placeholder.png">
+                    <h3 class="proj-title">Asteroids</h3>
+                    <p class="proj-desc">I made a recreation of 1979's famous Asteroids
+                        game with <span class="technology">HTML Canvas</span> and <span class="technology">JavaScript</span></p>
+                </div>
                 <div class="proj"></div>
                 <div class="proj"></div>
                 <div class="proj"></div>

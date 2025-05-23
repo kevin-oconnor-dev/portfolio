@@ -20,3 +20,9 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 observer.observe(skillsBox);
 
+const mainHeaderStroke = document.querySelector('#main-header');
+const mainHeaderFill = document.querySelector('#main-header-fill');
+const headerElement = document.querySelector('header');
+let headerHeight = headerElement.offsetHeight;
+mainHeaderStroke.style.top = headerHeight / 1/3 + 'px';
+mainHeaderFill.style.top = headerHeight / 1/3 + 'px';
