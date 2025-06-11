@@ -145,16 +145,28 @@ main h2 {
     font-weight: 300;
     position: relative;
 }
+.img-container {
+    width: 100%;
+    height: 50%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom: 2px solid white;
+    margin-bottom: 1vh;
+}
 .proj img {
     display: block;
     width: 100%;
-    height: 50%;
+    height: 100%;
     object-fit: cover;
     object-position: 0 top;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    margin-bottom: 1vh;
-    border-bottom: 2px solid white;
+}
+.img-container:nth-of-type(1) {
+    background-color: black;
+}
+.proj img:nth-of-type(1) {
+    padding: 5px;
 }
 .proj-title, .proj-desc {
     margin: 0 4px 0 8px;
@@ -170,10 +182,14 @@ main h2 {
     margin: 1vh auto;
     margin-top: auto;
 }
-.proj-btn-box button {
+.proj-btn-box a {
     border: none;
-    width: 5em;
-    height: 2.5em;
+    display: inline-block;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    text-align: center;
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
