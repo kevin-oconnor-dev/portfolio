@@ -2,6 +2,12 @@
     box-sizing: border-box;
     margin: 0;
 }
+html {
+    scroll-behavior: smooth; 
+}
+body {
+    overflow-x: hidden;
+}
 /* ---------------- fonts  --------------------*/
 /* 
 Bagel Fat One
@@ -23,7 +29,11 @@ nav {
     font-family: "Bagel Fat One";
     font-size: 1.3em;
 }
-.nav-item:hover {
+.nav-item a {
+    text-decoration: none;
+    color: black;  
+}
+.nav-item a:hover {
     cursor: pointer;
     color: white;
     transition: color .2s;
@@ -116,15 +126,34 @@ main h2 {
     margin: 5px 2vw;
     gap: 5px;
 }
+#skills-box img {
+    width: 8vw;
+}
 .skill {
-    border-radius: 15px;
-    font-family: "Inter";
-    padding: 10px;
-    margin: 0 2px;
-    background-color: black;
-    color: white;
+    padding: 0 1vw;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.skill:hover {
+    transform: scale(1.20);
+}
+
+#text-skills-box {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 0 0 0;
+}
+.text-skill {
+    height: fit-content;
+    width: 100%;
+    font-family: "Inter";
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 0.1;
+    text-wrap: nowrap;
+    padding: 0.5em;
 }
 
 /* ---------------- projects section ------------------- */
