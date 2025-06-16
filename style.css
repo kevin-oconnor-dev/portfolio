@@ -157,18 +157,20 @@ main h2 {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     border-bottom: 2px solid white;
+    background-color: white;
     margin-bottom: 1vh;
 }
+
 .proj img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0 top;
+    object-position: 50% 50%;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
-.img-container:nth-of-type(1) {
+.proj-1 .img-container {
     background-color: black;
 }
 .proj img:nth-of-type(1) {
