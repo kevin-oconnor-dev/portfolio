@@ -144,6 +144,12 @@ main h2 {
     font-family: "Inter";
     font-weight: 300;
     position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.proj:hover {
+    transform: translateY(-0.5em);
+    box-shadow: rgb(131, 131, 131) 0 5px 5px;
 }
 .img-container {
     width: 100%;
