@@ -118,7 +118,25 @@ main h2 {
 }
 #skills-header {
     text-align: left;
+    width: fit-content; 
     margin: 5px 2vw 2vh 2vw;
+}
+#skills-header.animated {
+    animation: bounce 1s forwards ease-out;
+}
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(0.90)
+    }
+    45% {
+        transform: scale(1.05);
+    }
+    55% {
+        transform: scale(1);
+    }
 }
 #skills-box {
     display: flex;

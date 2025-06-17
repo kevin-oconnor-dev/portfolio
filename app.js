@@ -1,6 +1,7 @@
 const mainHeaderStroke = document.querySelector('#main-header');
 const mainHeaderFill = document.querySelector('#main-header-fill');
 const headerElement = document.querySelector('header');
+const skillsHeader = document.querySelector('#skills-header');
 const skillsBox = document.querySelector('#skills-box');
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -18,11 +19,16 @@ mainHeaderFill.style.top = headerHeight / 1/3 + 'px';
 
 function fadeInSkills() {
     const skills = document.querySelectorAll('.skill');
+    skillsHeader.className = '';
 
     for (let i = 0; i < skills.length; i++) {
-        let delay = 500 * i + 100;
+        let delay = 250 * i + 100;
         setTimeout( () => {
             skills[i].style.opacity = '1'
         }, delay)
     }
+    let endTime = 250 * (skills.length - 1) + 100;
+    setTimeout(() => {
+      skillsHeader.className = 'animated';
+    }, endTime)
 }
