@@ -70,11 +70,7 @@ header {
     font-weight: normal;
     color: white;
 }
-@media (max-width: 800px) {
-    header #main-header {
-        font-size: clamp(55px, 10vw, 70px);
-    }
-}
+
 #dev-computer {
     position: absolute;
     bottom: 0;
@@ -99,6 +95,49 @@ main h2 {
 }
 section#about-me {
     display: flex;
+    border: 1px solid blue;
+}
+@media screen and (max-width: 800px) {
+    header nav {
+        justify-content: space-around;
+    }
+    header .nav-item, header .nav-item:nth-child(2) {
+        margin: 0;
+        font-size: 1.5em;
+    }
+    section#about-me {
+        flex-direction: column;
+    }
+    section #about-header {
+        font-size: 4em;
+        margin: 0 auto;
+    }
+    section #about-cont {
+        order: 2;
+    }
+    section #about-box {
+        width: 100%;
+    }
+    section #profile-pic-cont {
+        order: 1;
+        margin: 2vh auto;
+        width: 60vw;
+    }
+    section #skills-cont {
+        margin: 2vh auto;
+    }
+    section #skills-header {
+        margin: 1vh auto;
+        font-size: 4em;
+    }
+    section #skills-box {
+        justify-content: center;
+        gap: 5vh;
+    }
+    section .skill {
+        width: 25vw;
+
+    }
 }
 #about-cont {
     border: 1px solid;
@@ -122,6 +161,7 @@ section#about-me {
     border: 1px solid red;
 }
 #about-box {
+    border: 1px solid purple;
     margin: 5px 2vw;
     width: 45vw;
     padding: 10px;
@@ -162,14 +202,22 @@ section#about-me {
     margin: 5px 2vw;
     gap: 5px;
 }
-#skills-box img {
-    width: 8vw;
-}
 .skill {
+    width: 8vw;
     padding: 0 1vw;
     opacity: 0;
     transition: all 0.2s;
     cursor: pointer;
+}
+@media screen and (min-width: 500px) and (max-width: 699px) {
+    section .skill {
+        width: 20vw;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 799px) {
+    section .skill {
+        width: 15vw;
+    }
 }
 .skill:hover {
     transform: scale(1.20);
@@ -221,6 +269,29 @@ section#about-me {
     transition: all 0.3s;
     cursor: pointer;
     box-shadow: 1px 1px 2px black;
+}
+@media screen and (max-width: 750px) {
+    section#projects #projects-header {
+        text-align: center;
+        font-size: 4em;
+        margin-bottom: 5vh;
+    }
+    section#projects .proj {
+        flex-direction: column;
+        width: 100%;
+        height: fit-content
+    }
+    section#projects .proj-img-container {
+        width: 100%;
+        aspect-ratio: 1.75;
+    }
+    section#projects .proj-content {
+        width: 100%;
+    }
+    section#projects .proj-btn-box {
+        margin-top: 4vh;
+        gap: 8vw;
+    }
 }
 .proj-content {
     display: flex;
@@ -274,7 +345,7 @@ section#about-me {
     border-radius: 10px;
     padding: 10px;
 }
-.proj:hover .proj-overlay {
+.proj-img-container:hover .proj-overlay {
     opacity: 1;
 }
 .technology {
@@ -283,8 +354,9 @@ section#about-me {
     cursor: pointer;
 }
 .proj-btn-box {
+    display: flex;
+    gap: 2vw;
     width: fit-content;
-    display: block;
     margin: 1vh auto;
 }
 .proj-btn-box a {
@@ -298,16 +370,6 @@ section#about-me {
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
-}
-@media (max-width: 800px) {
-    main .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    main .proj {
-        height: 45vh;
-        width: 80vw;
-    }
 }
 
 /* ---------------- footer ------------------- */
@@ -327,7 +389,20 @@ footer {
     top: 2vw;
     right: 1vw;
 }
-
+@media screen and (max-width: 500px) {
+    body footer {
+        height: fit-content;
+        padding-bottom: 5px;
+    }
+    footer #footer-box {
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+    #footer-box #copy {
+        position: static;
+    }
+}
 /* ---------------- Header animation ------------------- */
 @keyframes background {
     0%{
