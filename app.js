@@ -27,7 +27,7 @@ function fadeInSkills() {
             skills[i].style.opacity = '1'
         }, delay)
     }
-    let endTime = 250 * (skills.length - 1) + 100;
+    let endTime = 250 * (skills.length - 1) + 600;
     setTimeout(() => {
       skillsHeader.className = 'animated';
     }, endTime)

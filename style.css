@@ -92,18 +92,37 @@ header {
 /* ---------------- about me section ------------------- */
 main h2 {
     margin: 2vw;
-    text-align: center;
+    text-align: left;
     font-family: 'Londrina Shadow';
     font-size: 6vw;
     font-weight: normal;
-
+}
+section#about-me {
+    display: flex;
+}
+#about-cont {
+    border: 1px solid;
+    margin: 5vw 4vw;
+}
+#profile-pic-cont {
+    display: flex;
+    align-items: center;
+    width: 25vw;
+    border: 1px solid;
+    margin: 5vw 4vw;
+    padding: 1vw;
+}
+#profile-pic {
+    width: 100%;
+    box-shadow: 0px 0px 4px 2px rgb(174, 174, 174);
 }
 #about-header {
     text-align: left;
-    margin: 1rem 0 auto 3rem;
+    width: fit-content;
+    border: 1px solid red;
 }
 #about-box {
-    margin: 0 0 auto 4rem;
+    margin: 5px 2vw;
     width: 45vw;
     padding: 10px;
     font-family: "Inter";
@@ -111,18 +130,17 @@ main h2 {
     font-weight: 300;
 }
 #skills-cont {
-    margin: 5vw auto;
+    border: 1px solid;
+    margin: 5vw 4vw;
     width: 85vw;
-    padding: 10px;
-    border-radius: 10px;
 }
 #skills-header {
     text-align: left;
     width: fit-content; 
-    margin: 5px 2vw 2vh 2vw;
+    border: 1px solid red;
 }
 #skills-header.animated {
-    animation: bounce 1s forwards ease-out;
+    animation: bounce 0.5s forwards ease-out;
 }
 @keyframes bounce {
     0% {
@@ -175,37 +193,52 @@ main h2 {
 }
 
 /* ---------------- projects section ------------------- */
-.projects-container {
-    margin-bottom: 4vh;
+#projects-cont {
+    margin: 0 4vw 5vh;
+    border: 1px solid;
+}
+#projects-header {
+    text-align: left;
+    border: 1px solid red;
+}
+#projects-box {
+    margin: 0 4vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2vw;
-    justify-content: center;
 }
 .proj {
     display: flex;
-    flex-direction: column;
-    height: 46vh;
-    width: 18vw;
-    border-radius: 15px;
-    background-color: #3eb18b;
+    width: 80%;
+    align-items: center;
     font-family: "Inter";
     font-weight: 300;
+    text-align: center;
     position: relative;
     transition: all 0.5s;
     cursor: pointer;
+    box-shadow: 1px 1px 2px black;
+}
+.proj-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+    border: solid 1px red;
+}
+.proj-title {
+    margin-bottom: 1em;
 }
 .proj:hover {
     transform: translateY(-0.5em);
     box-shadow: rgb(131, 131, 131) 0 5px 5px;
 }
-.img-container {
+.proj-img-container {
     width: 100%;
     height: 50%;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-bottom: 2px solid white;
-    background-color: white;
-    margin-bottom: 1vh;
+    margin: 1vh;
+    border: 1px solid red;
 }
 
 .proj img {
@@ -214,17 +247,12 @@ main h2 {
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
 }
 .proj-1 .img-container {
     background-color: black;
 }
 .proj img:nth-of-type(1) {
     padding: 5px;
-}
-.proj-title, .proj-desc {
-    margin: 0 4px 0 8px;
 }
 .technology {
     text-decoration: underline;
