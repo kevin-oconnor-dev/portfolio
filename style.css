@@ -209,8 +209,10 @@ section#about-me {
     gap: 2vw;
 }
 .proj {
-    display: flex;
-    width: 80%;
+    display: flex; 
+    width: 80vw;
+    height: 50vh;
+    margin-bottom: 5vh;
     align-items: center;
     font-family: "Inter";
     font-weight: 300;
@@ -222,6 +224,8 @@ section#about-me {
 }
 .proj-content {
     display: flex;
+    height: 100%;
+    width: 40vw;
     flex-direction: column;
     justify-content: space-between;
     padding: 2em;
@@ -236,8 +240,8 @@ section#about-me {
 }
 .proj-img-container {
     width: 100%;
-    height: 50%;
-    margin: 1vh;
+    height: 100%;
+    margin: 0 auto;
     border: 1px solid red;
 }
 
@@ -248,12 +252,7 @@ section#about-me {
     object-fit: cover;
     object-position: 50% 50%;
 }
-.proj-1 .img-container {
-    background-color: black;
-}
-.proj img:nth-of-type(1) {
-    padding: 5px;
-}
+
 .technology {
     text-decoration: underline;
     font-weight: 400;
@@ -263,10 +262,9 @@ section#about-me {
     width: fit-content;
     display: block;
     margin: 1vh auto;
-    margin-top: auto;
 }
 .proj-btn-box a {
-    border: none;
+    border: 1px solid black;
     display: inline-block;
     background-color: white;
     text-decoration: none;
