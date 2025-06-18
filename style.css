@@ -102,7 +102,7 @@ section#about-me {
 }
 #about-cont {
     border: 1px solid;
-    margin: 5vw 4vw;
+    margin: 3vw 4vw 5vw;
 }
 #profile-pic-cont {
     display: flex;
@@ -131,7 +131,7 @@ section#about-me {
 }
 #skills-cont {
     border: 1px solid;
-    margin: 5vw 4vw;
+    margin: 0 4vw 5vh;
     width: 85vw;
 }
 #skills-header {
@@ -218,7 +218,7 @@ section#about-me {
     font-weight: 300;
     text-align: center;
     position: relative;
-    transition: all 0.5s;
+    transition: all 0.3s;
     cursor: pointer;
     box-shadow: 1px 1px 2px black;
 }
@@ -239,20 +239,44 @@ section#about-me {
     box-shadow: rgb(131, 131, 131) 0 5px 5px;
 }
 .proj-img-container {
+    position: relative;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     border: 1px solid red;
 }
 
-.proj img {
+.proj-img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
 }
-
+.proj-overlay {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 236, 22, 0.211);
+    font-size: 2em;
+    font-family: "Londrina Solid";
+    color: white;
+    transition: opacity 0.3s ease;
+}
+.overlay-text {
+    background-color: #3eb18b;
+    border-radius: 10px;
+    padding: 10px;
+}
+.proj:hover .proj-overlay {
+    opacity: 1;
+}
 .technology {
     text-decoration: underline;
     font-weight: 400;
