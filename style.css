@@ -9,12 +9,58 @@ body {
     overflow-x: hidden;
 }
 /* ---------------- fonts  --------------------*/
-/* 
-Bagel Fat One
-Londrina Shadow
-Londrina Solid
-Inter
-*/
+
+/* londrina-shadow-regular */
+@font-face {
+  font-display: swap; 
+  font-family: 'Londrina Shadow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/londrina-shadow-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* londrina-solid-300 */
+@font-face {
+  font-display: swap; 
+  font-family: 'Londrina Solid';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/londrina-solid/londrina-solid-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* londrina-solid-regular */
+@font-face {
+  font-display: swap; 
+  font-family: 'Londrina Solid';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/londrina-solid/londrina-solid-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* bagel-fat-one-regular */
+@font-face {
+  font-display: swap; 
+  font-family: 'Bagel Fat One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/bagel-fat-one-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-300 */
+@font-face {
+  font-display: swap; 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/inter/inter-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-regular */
+@font-face {
+  font-display: swap; 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/inter/inter-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 /* ---------------- header ------------------- */
 nav {

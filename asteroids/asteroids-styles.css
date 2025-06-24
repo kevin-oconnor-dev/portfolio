@@ -1,6 +1,26 @@
 body {
   min-height: 100vh;
 }
+/* ---------------- fonts  --------------------*/
+
+/* londrina-shadow-regular */
+@font-face {
+  font-display: swap; 
+  font-family: 'Londrina Shadow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/londrina-shadow-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-regular */
+@font-face {
+  font-display: swap; 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/inter/inter-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 img {
   display: block;
   width: 60vw;
@@ -46,7 +66,4 @@ p {
   to {
     opacity: 1;
   }
-}
-#back-btn-svg:hover {
-
 }
