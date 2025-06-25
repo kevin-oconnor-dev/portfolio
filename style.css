@@ -69,7 +69,6 @@ nav {
     justify-content: flex-end;
 }
 .nav-item {
-    width: clamp(20px 3vw 40px);
     padding: 2px;
     margin: 0 1vw;
     font-family: "Bagel Fat One";
