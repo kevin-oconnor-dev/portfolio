@@ -141,7 +141,7 @@ main h2 {
 section#about-me {
     display: flex;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 799px) {
     header nav {
         justify-content: space-around;
     }
@@ -176,11 +176,37 @@ section#about-me {
     }
     section #skills-box {
         justify-content: center;
-        gap: 5vh;
+        gap: 4vw;
     }
-    section .skill {
+}
+@media screen and (min-width: 800px) and (max-width: 1199px) {
+    section#about-me {
+        flex-direction: column;
+    }
+    section #about-header {
+        font-size: 4em;
+        margin: 0 auto;
+    }
+    section #about-cont {
+        order: 2;
+    }
+    section #about-box {
+        width: 100%;
+    }
+    section #profile-pic-cont {
+        order: 1;
+        margin: 4vw auto 0;
         width: 25vw;
-
+    }
+    section #skills-cont {
+        margin: 2vh auto;
+    }
+    section #skills-header {
+        margin: 1vh auto;
+    }
+    section #skills-box {
+        justify-content: center;
+        gap: 2vw
     }
 }
 #about-cont {
@@ -247,14 +273,34 @@ section#about-me {
     transition: all 0.2s;
     cursor: pointer;
 }
-@media screen and (min-width: 500px) and (max-width: 699px) {
+@media screen and (max-width: 499px) {
+    section .skill {
+        width: 25vw;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 599px) {
     section .skill {
         width: 20vw;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 699px) {
+    section .skill {
+        width: 17vw;
     }
 }
 @media screen and (min-width: 700px) and (max-width: 799px) {
     section .skill {
         width: 15vw;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 999px) {
+    section .skill {
+        width: 12vw;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+    section .skill {
+        width: 10vw;
     }
 }
 .skill:hover {
@@ -328,6 +374,12 @@ section#about-me {
         gap: 8vw;
     }
 }
+@media screen and (min-width: 800px) and (max-width: 1199px) {
+    section#projects #projects-header {
+        text-align: center;
+    }
+}
+
 .proj-content {
     display: flex;
     height: 100%;
