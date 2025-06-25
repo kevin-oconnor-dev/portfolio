@@ -383,9 +383,7 @@ section#about-me {
     opacity: 1;
 }
 .technology {
-    text-decoration: underline;
     font-weight: 400;
-    cursor: pointer;
 }
 .proj-btn-box {
     display: flex;
@@ -406,6 +404,7 @@ section#about-me {
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
+    transition: background-color 0.3s;
 }
 .proj-btn-box a:hover {
     background-color: rgb(213, 213, 213);

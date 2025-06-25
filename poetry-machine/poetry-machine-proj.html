@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-  <link rel="stylesheet" href="./poetry-styles.css">
+  <link rel="stylesheet" href="../project-styles.css">
   <link rel="preload" href="../fonts/inter/inter-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="../fonts/londrina-shadow-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>Kevin O'Connor: Poetry Machine Project</title>
@@ -45,30 +45,53 @@
       across the screen! Come take a look at what I learned
       and how I worked through the problems I came across.
     </p>
-    <a href="https://kevin-oconnor-dev.github.io/poetry-machine/">
-      <img src="../img/projects/poetry-machine.png" alt="a screenshot of my poetry machine project">
-    </a>
+    <div id="proj-cont">
+      <a href="https://kevin-oconnor-dev.github.io/poetry-machine/">
+        <img src="../img/projects/poetry-machine.png" alt="a screenshot of my poetry machine project">
+      </a>
+    </div>
     <h2>Project purpose and goal</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Nulla quisquam repellendus ut labore harum rerum facere
-      quia cum repudiandae. Officia labore nesciunt facilis
-      tenetur quam esse facere? Omnis, fugiat sequi.
+      I was inspired to make this project after coming across <a href="https://poetrydb.org/index.html" target="_blank">PoetryDB</a>.
+      I wanted to make a web app that makes calls to the PoetryDB API and uses a
+      typing function to "type out" a poem onto the page. I developed this project
+      using functional components in React. The app enables users to get a random
+      poem or search for an author in the database. I also created a "Madlibs" mode
+      using Promise.all that allows the user to generate a poem with random lines
+      from between 1 and 8 randomly chosen poems.
     </p>
     <h2>Technologies and explanation</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Provident soluta expedita, reiciendis ea dolor itaque
-      eaque nemo amet atque rerum exercitationem quibusdam,
-      vitae recusandae aspernatur consequatur qui fugiat
-      architecto ut?
+      I originally had made a version of this project using imperative
+      programming and vanilla JavaScript, but after learning React I
+      decided it would be exactly the kind of project that would benefit
+      from using React's declarative-based UI style. I used functional
+      components and conditional rendering to display a different UI for
+      each different "mode" of the app (which I kept in state). I made use
+      of useState, useEffect, useRef, and useCallback in this project. I
+      enjoyed using React quite a bit and immediately found why it's
+      useful for developing UIs that have a lot of moving parts.
     </p>
     <h2>Problems and thought process</h2>
     <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Animi neque maxime quos totam sit possimus officia unde
-      eligendi, vero ad, velit esse? Rerum doloremque deleniti
-      ab iure velit deserunt est?
+      As this was the first web app of my own that I've made using React,
+      I got the chance to apply what I had learned from studying the docs
+      and doing tutorial projects. One problem I ran into occured because
+      I didn't have ESLint installed to verify the dependencies in my
+      useEffect dependency array, but actually wound up teaching me a lot
+      about how closures work in the context of React and React's rendering
+      logic. Inside of my useEffect, I was calling a function without including
+      it in the dependency array. I neglected to consider that the function
+      at the top level of my component would be re-declared every time the
+      component rendered, and that this would cause the function captured in
+      my useEffect to have a stale closure over a state variable that it used.
+      <br><br>
+      It was a complicated problem that had a simple solution (declare the
+      function with useCallback and put it inside the useEffect's dependency
+      array) but I was actually glad I didn't have ESLint installed and had
+      to understand what was happening myself. It gave me a deeper understanding
+      of what was going on, and thankfully now it's something I won't have
+      to go through again!
     </p>
   </main>
   <script>

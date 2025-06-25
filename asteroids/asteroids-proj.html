@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-  <link rel="stylesheet" href="./asteroids-styles.css">
+  <link rel="stylesheet" href="../project-styles.css">
   <link rel="preload" href="../fonts/inter/inter-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="../fonts/londrina-shadow-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>Kevin O'Connor: Asteroids Project</title>
@@ -45,14 +45,37 @@
       Come take a look at what I learned and how I worked through
       the problems I came across.
     </p>
-    <a href="https://kevin-oconnor-dev.github.io/asteroids/">
-      <img src="../img/projects/asteroids_screenshot.png" alt="a screenshot of my asteroids project">
-    </a>
+    <div id="proj-cont">
+      <a href="https://kevin-oconnor-dev.github.io/asteroids/">
+        <img src="../img/projects/asteroids_screenshot.png" alt="a screenshot of my asteroids project">
+      </a>
+    </div>
     <h2>Project purpose and goal</h2>
-    <p></p>
+    <p>
+      My purpose for this project was to learn about HTML Canvas and get more experience with
+      object-oriented programming. It was my first time using canvas and also my first time 
+      developing a game. I wanted to strengthen my chops with vanilla JavaScript and get 
+      some practice with writing organized, well-structured code. As the project was my first
+      introduction to concepts such as a game loop and drawing using geometry/trigonometry, I 
+      followed a tutorial to initially complete this project before refactoring the code and 
+      adding some features of my own, such as the ship's aiming beam and a special aiming mode
+      for the ship to make the game a little bit less tedious to play by modern standards.
+    </p>
     <h2>Technologies and explanation</h2>
-    <p></p>
+    <p>
+      This project uses vanilla JavaScript and HTML Canvas as well as CSS and HTML. As the
+      focus of this project was improving my skills with plain JS and getting some chops
+      with programming logic, I didn't use a framework to develop this project.
+    </p>
     <h2>Problems and thought process</h2>
+    <p>
+      I came across a few different problems while trying to get this project working. One of
+      the first was trying to make the ship longer than it was in the tutorial, for which I
+      needed to try to understand the trigonometry used to draw the ship's triangular path
+      on the canvas. Another problem I had was with positioning the game text, which I solved
+      by using getBoundingClientRect to accurately position the "new level" and "game over"
+      messages over the center of the canvas.
+    </p>
   </main>
   <script>
     document.getElementById('back-btn-svg').addEventListener('click', () => history.back());

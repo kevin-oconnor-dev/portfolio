@@ -20,14 +20,21 @@ body {
   font-weight: 400;
   src: url('/fonts/inter/inter-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* ------------------------------------------- */
 
-img {
-  display: block;
+#proj-cont {
   width: 60vw;
   margin: 0 auto;
+}
+img {
+  width: 100%;
   border: 1px solid black;
   object-fit: cover;
   aspect-ratio: 1.75;
+  transition: filter 0.5s;
+}
+img:hover {
+  filter: contrast(0.65);
 }
 h1 {
   font-family: "Londrina Shadow";
@@ -58,6 +65,14 @@ p {
   background-color: rgba(195, 169, 137, 0.616);
   opacity: 0;
   animation: fade-in .5s forwards;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#back-btn-svg:hover {
+  transform: scale(1.035)
+}
+#back-btn-svg:active {
+  transform: scale(0.95);
 }
 @keyframes fade-in {
   from {
@@ -66,4 +81,7 @@ p {
   to {
     opacity: 1;
   }
+}
+main > p:last-child {
+  margin-bottom: 15vh;
 }
