@@ -211,17 +211,7 @@ section#about-me {
 }
 #about-cont {
     margin: 3vw 4vw 2vw;
-}
-#profile-pic-cont {
-    display: flex;
-    align-items: center;
-    width: 25vw;
-    margin: 5vw 4vw;
-    padding: 1vw;
-}
-#profile-pic {
-    width: 100%;
-    box-shadow: 0px 0px 4px 2px rgb(174, 174, 174);
+    width: 70vw;
 }
 #about-header {
     text-align: left;
@@ -229,11 +219,22 @@ section#about-me {
 }
 #about-box {
     margin: 5px 2vw;
-    width: 45vw;
+    width: fit-content;
     padding: 10px;
     font-family: "Inter";
     font-size: 1.5em;
     font-weight: 300;
+}
+#profile-pic-cont {
+    display: flex;
+    align-items: flex-end;
+    width: 25vw;
+    margin: 5vw 4vw;
+    padding: 1vw;
+}
+#profile-pic {
+    width: 100%;
+    box-shadow: 0px 0px 4px 1px rgb(174, 174, 174);
 }
 #skills-cont {
     margin: 0 4vw 5vh;
