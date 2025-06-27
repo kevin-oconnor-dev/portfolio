@@ -3,6 +3,8 @@ const mainHeaderFill = document.querySelector('#main-header-fill');
 const headerElement = document.querySelector('header');
 const skillsHeader = document.querySelector('#skills-header');
 const skillsBox = document.querySelector('#skills-box');
+const openPoetryMachine = document.querySelector('#open-poetry-machine');
+const openAsteroids = document.querySelector('#open-asteroids');
 
 const observer = new IntersectionObserver((entries, observer) => {
   const entry = entries[0]; // only one element observed
@@ -43,3 +45,10 @@ function showSkillsImmediately() {
     skill.style.opacity = 1;
   })
 }
+
+openPoetryMachine.addEventListener('click', () => {
+  umami.trackEvent('openPoetryMachine')
+})
+openAsteroids.addEventListener('click', () => {
+  umami.trackEvent('openAsteroids')
+})
